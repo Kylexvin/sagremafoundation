@@ -73,9 +73,9 @@ body {
     overflow-x: hidden;
     min-width: 320px; /* Prevent extreme narrow viewports */
 }
-* {
+/* * {
     border: 1px solid red;
-}
+} */
 /* ========================================
    4. CONTAINER & LAYOUT UTILITIES
    ======================================== */
@@ -161,24 +161,38 @@ p {
     flex-direction: column;
     transition: transform 0.3s ease;
     flex-shrink: 0;
-    
+
 }
 
 .nav-logo:hover {
     transform: scale(1.05);
 }
 
-.nav-logo h1 {
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-text h1 {
     font-size: 1.5rem;
+    margin: 0;
     line-height: 1;
 }
 
-.nav-logo span {
-    font-size: 0.75rem;
-    color: #666;
-    font-weight: normal;
-    margin-top: -2px;
+.logo-text span {
+    font-size: 0.85rem;
+    color: #888;
+    margin-left: 4px;
 }
+
+.logo-img {
+    height: 60px;
+    max-width: 180px;
+    display: block; /* set to block when ready */
+}
+
 
 /* Mobile Menu Toggle */
 .mobile-toggle {
