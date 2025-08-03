@@ -73,7 +73,9 @@ body {
     overflow-x: hidden;
     min-width: 320px; /* Prevent extreme narrow viewports */
 }
-
+* {
+    border: 1px solid red;
+}
 /* ========================================
    4. CONTAINER & LAYOUT UTILITIES
    ======================================== */
@@ -329,6 +331,55 @@ p {
 .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+/* Hide nav links on small screens, show toggle */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        display: none; /* You must wrap the nav items in a .nav-links container */
+    }
+
+    .mobile-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: flex; /* Already set in your code */
+    }
+}
+
+/* Show desktop nav, hide mobile menu on larger screens */
+@media (min-width: 769px) {
+    .mobile-toggle {
+        display: none;
+    }
+
+    .nav-menu {
+        display: none !important; /* Prevent flash of mobile nav */
+    }
+
+    .nav-links {
+        display: flex;
+        gap: var(--space-lg);
+        align-items: center;
+    }
+
+    .nav-item {
+        border: none;
+    }
+
+    .nav-link {
+        padding: 0;
+        background: transparent;
+    }
+
+    .nav-link:hover {
+        background: none;
+        color: #2c5530;
+    }
 }
 
 /* ========================================
