@@ -144,7 +144,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 80px;
     width: 100%;
     overflow: hidden;
     padding: 0 var(--container-padding);
@@ -412,7 +412,7 @@ p {
     position: relative;
     overflow: hidden;
     padding: var(--space-xl) var(--container-padding);
-    margin-top: 70px;
+    margin-top: 20px;
 }
 
 .hero::before {
