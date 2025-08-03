@@ -403,7 +403,7 @@ p {
    7. HERO SECTION - MOBILE FIRST
    ======================================== */
 .hero {
-    min-height: calc(100vh - 20px);
+    min-height: 100vh;
     background: var(--gradient-mesh), var(--soft-gray);
     display: flex;
     align-items: center;
@@ -412,7 +412,7 @@ p {
     position: relative;
     overflow: hidden;
     padding: var(--space-xl) var(--container-padding);
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .hero::before {
@@ -435,7 +435,7 @@ p {
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 800px;
+    max-width: auto;
 }
 
 .hero-content h1 {
