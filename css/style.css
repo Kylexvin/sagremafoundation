@@ -403,7 +403,7 @@ p {
    7. HERO SECTION - MOBILE FIRST
    ======================================== */
 .hero {
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 20px);
     background: var(--gradient-mesh), var(--soft-gray);
     display: flex;
     align-items: center;
@@ -874,7 +874,7 @@ p {
     background: white;
     color: var(--primary-blue);
     border: 2px solid var(--primary-blue);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-md); margin-bottom: 20px;
 }
 
 .btn-secondary:hover {
