@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Permaculture Agriculture Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(46, 125, 50, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 6px solid #4caf50;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .section h2 {
+            color: #2e7d32;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section h3 {
+            color: #388e3c;
+            font-size: 1.4rem;
+            margin: 25px 0 15px 0;
+            border-bottom: 2px solid #f1f8e9;
+            padding-bottom: 8px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background: #4caf50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .initiatives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .initiative-card {
+            background: linear-gradient(135deg, #f9fbe7 0%, #f0f4c3 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #e8f5e8;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .initiative-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #4caf50, #8bc34a);
+        }
+
+        .initiative-card:hover {
+            border-color: #4caf50;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(76, 175, 80, 0.2);
+        }
+
+        .initiative-card h4 {
+            color: #2e7d32;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .initiative-icon {
+            font-size: 1.8rem;
+        }
+
+        .cost-highlight {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #4caf50;
+            font-weight: 500;
+        }
+
+        .cost-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+        }
+
+        .cost-item:last-child {
+            border-bottom: none;
+        }
+
+        .cost-amount {
+            color: #2e7d32;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .support-section {
+            background: linear-gradient(135deg, #388e3c 0%, #2e7d32 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .support-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .support-section p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto 15px auto;
+        }
+
+        .plant-grow {
+            font-size: 2rem;
+            animation: grow 4s ease-in-out infinite;
+        }
+
+        @keyframes grow {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            height: 250px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(46, 125, 50, 0.3);
+            border-color: #4caf50;
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #388e3c 0%, #2e7d32 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .gallery-placeholder h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .gallery-placeholder p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .gallery-item.crops {
+            background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+        }
+
+        .gallery-item.livestock {
+            background: linear-gradient(135deg, #8bc34a 0%, #689f38 100%);
+        }
+
+        .gallery-item.fishing {
+            background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%);
+        }
+
+        .gallery-item.community-work {
+            background: linear-gradient(135deg, #ffb74d 0%, #ff9800 100%);
+        }
+
+        .gallery-item.training {
+            background: linear-gradient(135deg, #ab47bc 0%, #8e24aa 100%);
+        }
+
+        .gallery-item.success-stories {
+            background: linear-gradient(135deg, #26c6da 0%, #00acc1 100%);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #f1f8e9 0%, #dcedc8 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #4caf50;
+        }
+
+        .needs-list {
+            background: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #ff9800;
+        }
+
+        .needs-list h4 {
+            color: #e65100;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .initiatives-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                padding: 40px 20px;
+            }
+            
+            .cost-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1><span class="plant-grow">🌱</span> GOAL. 3 | ORGANIC PERMACULTURE AGRICULTURE</h1>
+            <p class="subtitle">Sustainable Farming for Community Development</p>
+        </div>
+
+        <div class="section">
+            <h2><div class="icon">🌿</div>ABOUT ECO-AGRICULTURE</h2>
+            <p>Eco-Agriculture partners strive for a community where rural livelihoods, nature, and food security are equally valued, and where the communities have a larger role in managing the natural resources they rely on. We work with community groups and farmers to manage farmland in ways that benefit biodiversity as well as food production.</p>
+            
+            <div class="highlight">
+                <p>We help them to learn about crops that will nurture the soil and provide nutritional benefits, and also about land-clearing methods that leave trees and bushes in place as wildlife habitat.</p>
+            </div>
+
+            <div class="needs-list">
+                <h4>Current Farming Needs:</h4>
+                <div class="cost-item">
+                    <span>Garden Fences (Protection & Security)</span>
+                    <span class="cost-amount">Needed</span>
+                </div>
+                <div class="cost-item">
+                    <span>Ploughs (Soil Preparation)</span>
+                    <span class="cost-amount">$95 USD</span>
+                </div>
+                <div class="cost-item">
+                    <span>Water Pumps (Irrigation System)</span>
+                    <span class="cost-amount">$973 USD</span>
+                </div>
+                <div class="cost-item">
+                    <span>Pipes (Water Distribution)</span>
+                    <span class="cost-amount">$973 USD</span>
+                </div>
+            </div>
+
+            <p><strong>Additional Support:</strong> Help with applying for grants, online fund-raises & microfinance education.</p>
+        </div>
+
+        <div class="section">
+            <h2><div class="icon">🐓</div>LIVESTOCK DEVELOPMENT</h2>
+            <p>Most community members dwell on poultry, goat and cattle keeping as one way of improving their lives through getting food and a little income for their upkeep and educating their children. Poultry farming is an enterprise that can be done with low requirements on time and land.</p>
+            
+            <div class="initiatives-grid">
+                <div class="initiative-card">
+                    <h4><span class="initiative-icon">🐔</span>Organic Poultry Units</h4>
+                    <p>The foundation is developing several organic poultry units on farms belonging to foundation members in order to increase their standards of living.</p>
+                    <div class="cost-highlight">
+                        <div class="cost-item">
+                            <span>Poultry Cage (100 chickens)</span>
+                            <span class="cost-amount">$1,460 USD</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Grazing Yard (1,000 chickens)</span>
+                            <span class="cost-amount">$973 USD</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="initiative-card">
+                    <h4><span class="initiative-icon">🐐</span>Goat Farming</h4>
+                    <p>Goat keeping provides sustainable income and food security for community families while requiring minimal land and resources.</p>
+                    <div class="cost-highlight">
+                        <div class="cost-item">
+                            <span>Goat Shade (30 goats)</span>
+                            <span class="cost-amount">$3,400 USD</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="initiative-card">
+                    <h4><span class="initiative-icon">🐄</span>Cattle Development</h4>
+                    <p>Cattle farming provides milk, meat, and income opportunities for larger community families with appropriate land resources.</p>
+                    <div class="cost-highlight">
+                        <div class="cost-item">
+                            <span>Cattle Shade (25 cows)</span>
+                            <span class="cost-amount">$4,865 USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><div class="icon">🐟</div>SUSTAINABLE FISHERIES</h2>
+            <p>Most of our youths depend on fishing activities as their major means of getting bread on the table and improving their way of life. They should be supported and strengthened financially to build them economically for self-reliance and sustainability by giving them the required gears to support their activities.</p>
+            
+            <div class="highlight">
+                <p>Economic empowerment of the community is one of the Foundation's primary functions. A project is currently underway to establish floating fish cages in Lake Victoria for sustainable aquaculture. This project helps to create employment opportunities, promote sustainable farming in the region and also boost the incomes of community members.</p>
+            </div>
+
+            <p>We are also planning to support registered groups of fishermen, by giving them revolving funds through micro-finance initiatives allowing them to buy needed fishing gear.</p>
+
+            <div class="initiatives-grid">
+                <div class="initiative-card">
+                    <h4><span class="initiative-icon">🎣</span>Fishing Equipment</h4>
+                    <div class="cost-highlight">
+                        <div class="cost-item">
+                            <span>Complete Fishing Net</span>
+                            <span class="cost-amount">$3,400 USD</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Fishing Boat</span>
+                            <span class="cost-amount">$4,880 USD</span>
+                        </div>
+                        <div class="cost-item">
+                            <span>Boat Engine</span>
+                            <span class="cost-amount">$4,880 USD</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="initiative-card">
+                    <h4><span class="initiative-icon">🏗️</span>Floating Fish Cages</h4>
+                    <p>Sustainable aquaculture infrastructure for long-term community development and employment creation.</p>
+                    <div class="cost-highlight">
+                        <div class="cost-item">
+                            <span>One Floating Cage System</span>
+                            <span class="cost-amount">$14,595 USD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><div class="icon">📸</div>PROJECT GALLERY</h2>
+            <p>Witness the transformation of sustainable agriculture, livestock development, and fisheries initiatives that are empowering our community towards food security and economic independence.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item crops">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">🌾</div>
+                        <h4>Organic Crop Production</h4>
+                        <p>Permaculture farming techniques, soil-nurturing crops, and sustainable land management practices</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item livestock">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">🐄</div>
+                        <h4>Livestock Development</h4>
+                        <p>Poultry units, goat farming, and cattle keeping for improved livelihoods and nutrition</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item fishing">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">🎣</div>
+                        <h4>Sustainable Fisheries</h4>
+                        <p>Floating fish cages, fishing equipment, and aquaculture development in Lake Victoria</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item community-work">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">👥</div>
+                        <h4>Community Collaboration</h4>
+                        <p>Farmers working together, sharing knowledge, and building sustainable agricultural systems</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item training">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">📚</div>
+                        <h4>Training & Education</h4>
+                        <p>Microfinance education, grant application workshops, and agricultural skill development</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item success-stories">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">🏆</div>
+                        <h4>Success Stories</h4>
+                        <p>Before and after transformations showing improved food security and economic empowerment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="support-section">
+            <h2>WE NEED YOUR SUPPORT</h2>
+            <p>Help us build sustainable agricultural systems that benefit both communities and the environment. Your contribution supports organic farming, livestock development, and sustainable fisheries.</p>
+            <p><strong>We provide assistance with:</strong> Grant applications, online fundraising campaigns, and microfinance education for community empowerment.</p>
+        </div>
+    </div>
+</body>
+</html>

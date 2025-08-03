@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Conservation - Mfangano Island</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+        }
+
+        .hero-section h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.4em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .conservation-highlight {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+            display: inline-block;
+        }
+
+        .conservation-highlight h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .content-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            color: #2c5aa0;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            border-radius: 2px;
+        }
+
+        .about-content {
+            background: #f8fff8;
+            padding: 40px;
+            border-radius: 15px;
+            border-left: 6px solid #28a745;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .problem-highlight {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(220, 53, 69, 0.3);
+        }
+
+        .problem-highlight h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .problem-highlight p {
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+
+        .trees-program {
+            background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 25px rgba(23, 162, 184, 0.3);
+        }
+
+        .trees-program h3 {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .trees-program p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .training-activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .activity-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #28a745;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .activity-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #28a745;
+        }
+
+        .activity-card h4 {
+            color: #2c5aa0;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .activity-card p {
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .workshop-cost {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.2);
+        }
+
+        .workshop-cost h3 {
+            color: #856404;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .workshop-cost p {
+            color: #856404;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .donation-impact {
+            background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(111, 66, 193, 0.3);
+        }
+
+        .donation-impact h3 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .donation-impact .tree-cost {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        .tree-cost h4 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .tree-cost p {
+            font-size: 1.2em;
+        }
+
+        .support-needed {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .support-areas {
+            background: #e8f5e8;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid #28a745;
+        }
+
+        .support-areas h4 {
+            color: #2c5aa0;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .support-areas p {
+            font-size: 1.1em;
+            text-align: center;
+            color: #155724;
+            font-weight: 500;
+        }
+
+        .gallery-section {
+            margin-top: 50px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #155724;
+            font-size: 1.1em;
+            border-bottom: 3px solid #28a745;
+        }
+
+        .gallery-caption {
+            padding: 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .gallery-caption h4 {
+            color: #2c5aa0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.5em;
+            }
+            
+            .training-activities {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .hero-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <h1>GOAL 6 | ENVIRONMENTAL CONSERVATION</h1>
+            <p class="subtitle">Restoring Degraded Land, Fighting Climate Change</p>
+            <div class="conservation-highlight">
+                <h3>🌳 Trees for the Future</h3>
+                <p>Grassroots environmental restoration program</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">ABOUT</h2>
+            <div class="about-content">
+                <p>Many people on islands live on severely degraded land. This state of land directly affects their living standards, making it very difficult to grow food, collect firewood, or make a living off the land.</p>
+                <p>Degraded land also contributes to global warming — when trees are gone, they can no longer remove carbon dioxide (a greenhouse gas) from the atmosphere.</p>
+            </div>
+
+            <div class="problem-highlight">
+                <h3>🚨 The Challenge We Face</h3>
+                <p>Severely degraded land is impacting the livelihoods of island communities, making basic survival activities like food production and firewood collection extremely difficult. Without intervention, this environmental degradation continues to worsen, contributing to global climate change.</p>
+            </div>
+
+            <div class="trees-program">
+                <h3>🌲 Trees for the Future (TREES) Program</h3>
+                <p>Trees for the Future (TREES) is a grassroots program that helps people living on degraded land to improve their lives through environmentally sound development projects.</p>
+                <p>Through our network of technicians, volunteers, and community leaders, we sponsor farmer's seminars, workshops and trainings and provide technical knowledge on agroforestry, reforestation, and sustainable development, along with planting materials.</p>
+                <p><strong>We help communities return their land to sustainable production.</strong></p>
+            </div>
+
+            <div class="support-areas">
+                <h4>Support Needed</h4>
+                <p><strong>Help with applying for grants, online fund-raises & ecological education.</strong></p>
+            </div>
+            <div class="support-needed">WE NEED YOUR SUPPORT</div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">TRAINING & ACTIVITIES</h2>
+            
+            <div class="about-content">
+                <p>We are training farmers in agroforestry, fruit tree production, reforestation, and vegetable production and encourage all community members to help prevent soil erosion by practicing these techniques on the affected parts of their plots and by participating in communal environmental conservation days.</p>
+            </div>
+
+            <div class="training-activities">
+                <div class="activity-card">
+                    <div class="icon">🌾</div>
+                    <h4>Agroforestry Training</h4>
+                    <p>Teaching sustainable farming practices that integrate trees and crops to restore soil fertility and increase productivity.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="icon">🍎</div>
+                    <h4>Fruit Tree Production</h4>
+                    <p>Training farmers to grow fruit trees for both environmental restoration and sustainable income generation.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="icon">🌳</div>
+                    <h4>Reforestation</h4>
+                    <p>Large-scale tree planting initiatives to restore degraded landscapes and combat climate change.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="icon">🥬</div>
+                    <h4>Vegetable Production</h4>
+                    <p>Sustainable vegetable farming techniques that improve food security while protecting the environment.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="icon">🛡️</div>
+                    <h4>Soil Erosion Prevention</h4>
+                    <p>Community-based practices to prevent soil erosion and restore land productivity.</p>
+                </div>
+                <div class="activity-card">
+                    <div class="icon">🤝</div>
+                    <h4>Conservation Days</h4>
+                    <p>Regular community events focused on environmental conservation and restoration activities.</p>
+                </div>
+            </div>
+
+            <div class="workshop-cost">
+                <h3>💰 Workshop Investment</h3>
+                <p>Usually the cost for a workshop (one day) is around $487 USD</p>
+            </div>
+
+            <div class="support-areas">
+                <h4>Support Needed</h4>
+                <p><strong>Help with applying for grants, online fund-raises & ecological education.</strong></p>
+            </div>
+            <div class="support-needed">WE NEED YOUR SUPPORT</div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">IMPACT & SUPPORT</h2>
+            
+            <div class="about-content">
+                <p>We donate Foundation's funds for the farmer's purchase of seeds and seedlings and help with events as well as editing and translating of books and manuals. We help increase public awareness by talking with schools and other groups.</p>
+                <p>Volunteers are also needed to encourage communities, churches, and civil groups to support tree planting projects.</p>
+            </div>
+
+            <div class="donation-impact">
+                <h3>🌱 Your Impact</h3>
+                <p>Due to our extensive networking with technicians, volunteers, and community leaders worldwide:</p>
+                <div class="tree-cost">
+                    <h4>Only $0.49</h4>
+                    <p>will help plant a tree!</p>
+                </div>
+                <p>Every small donation makes a big difference in environmental restoration and climate action.</p>
+            </div>
+
+            <div class="support-areas">
+                <h4>Support Needed</h4>
+                <p><strong>Help with applying for grants, online fund-raises & ecological education.</strong></p>
+            </div>
+            <div class="support-needed">WE NEED YOUR SUPPORT</div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">GALLERY</h2>
+            <div class="gallery-section">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            🌱 Tree Planting Activities
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Reforestation Projects</h4>
+                            <p>Community members participating in tree planting initiatives to restore degraded landscapes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            🌾 Agroforestry Training
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Farmer Education</h4>
+                            <p>Training sessions teaching sustainable farming practices that integrate trees and crops.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            🏞️ Land Restoration
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Before & After</h4>
+                            <p>Visual documentation of land transformation from degraded areas to productive, sustainable landscapes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            👥 Community Workshops
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Educational Programs</h4>
+                            <p>Community seminars and workshops on environmental conservation and sustainable development.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            🌳 Fruit Tree Orchards
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Sustainable Income</h4>
+                            <p>Fruit tree production projects providing both environmental benefits and economic opportunities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            🛡️ Erosion Control
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Soil Conservation</h4>
+                            <p>Innovative techniques and practices used to prevent soil erosion and restore land productivity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>WE NEED YOUR SUPPORT</h2>
+            <p>Join us in restoring degraded land and fighting climate change through grassroots environmental conservation.</p>
+            <p><strong>Support Areas:</strong> Grant applications, online fundraising, ecological education, and volunteer coordination.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakinga Community Water Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 35px rgba(21, 101, 192, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .section {
+            background: white;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 6px solid #1976d2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .section h2 {
+            color: #1565c0;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section h3 {
+            color: #1976d2;
+            font-size: 1.4rem;
+            margin: 25px 0 15px 0;
+            border-bottom: 2px solid #e3f2fd;
+            padding-bottom: 8px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            background: #2196f3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .achievement-card {
+            background: linear-gradient(135deg, #f3f9ff 0%, #e8f4fd 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #e3f2fd;
+            transition: all 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            border-color: #2196f3;
+            transform: translateY(-3px);
+        }
+
+        .achievement-card h4 {
+            color: #1565c0;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .support-section {
+            background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 40px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .support-section h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .support-section p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .water-drop {
+            font-size: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-radius: 15px;
+            overflow: hidden;
+            height: 250px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(21, 101, 192, 0.3);
+            border-color: #2196f3;
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery-placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .gallery-placeholder h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .gallery-placeholder p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        .gallery-item.water-tower {
+            background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+        }
+
+        .gallery-item.power-system {
+            background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
+        }
+
+        .gallery-item.water-kiosk {
+            background: linear-gradient(135deg, #ab47bc 0%, #9c27b0 100%);
+        }
+
+        .gallery-item.community {
+            background: linear-gradient(135deg, #ff7043 0%, #ff5722 100%);
+        }
+
+        .gallery-item.before-after {
+            background: linear-gradient(135deg, #ffa726 0%, #ff9800 100%);
+        }
+
+        .gallery-item.team {
+            background: linear-gradient(135deg, #ec407a 0%, #e91e63 100%);
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1><span class="water-drop">💧</span> GOAL. 2 | CLEAN DRINKING WATER FOR THE COMMUNITY</h1>
+            <p class="subtitle">Wakinga Community Water Project</p>
+        </div>
+
+        <div class="section">
+            <h2><div class="icon">💧</div>ABOUT</h2>
+            <p>Wakinga Community Water Project is driven by the belief that clean water is life. It was created by Angela Yuan, an American student, partnering with the Sagrema Foundation and "Uzima" Filters. It was funded through friends, family and a grant to provide clean drinking water for free to everyone on Mfangano Island; the filters provided to the community should last for 10 years before they need to be replaced.</p>
+            <div class="highlight">
+                <p>Lake water is pumped into two large tanks on a water tower and treated by an "Uzima" filter that eliminates all bacteria, protozoa, sediments and cysts, making the water safe to drink.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><div class="icon">⚠️</div>LAKE VICTORIA'S POLLUTED WATER</h2>
+            <p>Lake Victoria is the dumping ground for three surrounding countries. It is contaminated by raw sewage, animal waste, toxic chemicals, micro plastic, and more. Furthermore, the lake is used daily for washing dishes and clothes, and for direct bathing.</p>
+            <p>It comes as no surprise that the water of the lake is not clean to drink and on top of the pollutants harbors many waterborne diseases such as diarrhea, typhoid, dysentery and cholera. The Sagrema Foundation dedicates time to educating people on the dangers of both polluting water and using polluted water.</p>
+        </div>
+
+        <div class="section">
+            <h2><div class="icon">🏆</div>ACHIEVEMENTS</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h4>1. The Power System</h4>
+                    <p>A submersible water pump was acquired with the help of donations. A power house was installed and power cables were put in place to connect the pump and the power house as well as all necessary electrical gadgets to drive the submersible water pump.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h4>2. The Water Tower</h4>
+                    <p>We accurately identified and built two 5,000L water tanks tower on a well raised point that supplies water to the community with sufficient gravity force.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h4>3. The First Water Kiosk</h4>
+                    <p>In addition we successfully installed the first water kiosk, a point of water collection that serves up to 5,000 people a day. We still need extensions to make water available to many community members closer to their residential areas to avoid long distances walking in search of water.</p>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <p>It is for this reason that we still request for more support from donors, volunteers, well-wishers, NGOs and government relevant sectors to lend hand either financially or materially in support of the project's extension to achieve our objectives.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2><div class="icon">📸</div>PROJECT GALLERY</h2>
+            <p>Explore the journey of bringing clean water to Mfangano Island through our visual documentation of key milestones and community impact.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item water-tower">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">🏗️</div>
+                        <h4>Water Tower Construction</h4>
+                        <p>Building the 5,000L dual tank water tower system with gravity-fed distribution</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item power-system">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">⚡</div>
+                        <h4>Power System Installation</h4>
+                        <p>Setting up the electrical infrastructure and submersible pump system</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item water-kiosk">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">🚰</div>
+                        <h4>First Water Kiosk</h4>
+                        <p>The operational water collection point serving 5,000 people daily</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item community">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">👥</div>
+                        <h4>Community Impact</h4>
+                        <p>Families and individuals accessing clean, safe drinking water</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item before-after">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">🔄</div>
+                        <h4>Before & After</h4>
+                        <p>Transformation of water access on Mfangano Island</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item team">
+                    <div class="gallery-placeholder">
+                        <div class="gallery-placeholder-icon">🤝</div>
+                        <h4>Project Team</h4>
+                        <p>Angela Yuan, Sagrema Foundation, and community partners working together</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="support-section">
+            <h2>WE NEED YOUR SUPPORT</h2>
+            <p>Help us expand clean water access to more families on Mfangano Island. Your contribution can help us build additional water kiosks, extend our distribution network, and bring life-saving clean water closer to those who need it most.</p>
+        </div>
+    </div>
+</body>
+</html>

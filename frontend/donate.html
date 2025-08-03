@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Mfangano Island Foundation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header .subtitle {
+            color: #34495e;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .intro-text {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .intro-text p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+        
+        .donation-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .donation-goals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .goal-card {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .goal-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .goal-card:hover::before {
+            left: 100%;
+        }
+        
+        .goal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .goal-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .goal-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .donate-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .donate-btn:hover {
+            background: white;
+            color: #0984e3;
+            transform: scale(1.05);
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .contact-info {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        
+        .contact-info h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .contact-details {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        .contact-details strong {
+            color: #2c3e50;
+        }
+        
+        .phone-number {
+            font-size: 1.2rem;
+            color: #e74c3c;
+            font-weight: bold;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+            border: 2px solid #e74c3c;
+        }
+        
+        .closing-message {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .closing-message h3 {
+            color: #27ae60;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .closing-message p {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .youtube-link {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .youtube-link:hover {
+            background: #c0392b;
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .donation-goals {
+                grid-template-columns: 1fr;
+            }
+            
+            .header, .donation-section, .intro-text {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Get Involved</h1>
+            <p class="subtitle">Support Mfangano Island Community Development</p>
+        </div>
+        
+        <div class="intro-text">
+            <p>We work with partner organizations to help solve Mfangano Island's unique and challenging problems. Our Foundation's programs help connect government agencies, donors, well-wishers, NGOs and other community organizations with the schools, health care units, fishermen, local community groups and households/families members on Mfangano and its sister islands.</p>
+            
+            <p>Our partnerships create opportunities for volunteering, fund-raising, and organic farming field demonstrations.</p>
+            
+            <a href="#" class="youtube-link">📺 See our YouTube Videos for more information</a>
+        </div>
+        
+        <div class="donation-section">
+            <h2 class="section-title">🌐 Online Donations</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.2rem; color: #2c3e50;">
+                <strong>Every donation to any project of your choice is highly appreciated</strong>
+            </p>
+            
+            <div class="donation-goals">
+                <div class="goal-card">
+                    <div class="goal-number">GOAL 1</div>
+                    <div class="goal-title">The Community Clinic on Mfangano Island</div>
+                    <a href="#" class="donate-btn">Donate Here</a>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-number">GOAL 2</div>
+                    <div class="goal-title">The Wakinga Community Water Project</div>
+                    <a href="#" class="donate-btn">Donate Here</a>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-number">GOAL 3</div>
+                    <div class="goal-title">A Community Garden for the Less-Fortunate</div>
+                    <a href="#" class="donate-btn">Donate Here</a>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-number">GOAL 4</div>
+                    <div class="goal-title">Women & Youth Empowerment</div>
+                    <a href="#" class="donate-btn">Donate Here</a>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-number">GOAL 5</div>
+                    <div class="goal-title">Improve Schools Infrastructure on Mfangano Island</div>
+                    <a href="#" class="donate-btn">Donate Here</a>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-number">GOAL 6</div>
+                    <div class="goal-title">Eco Projects</div>
+                    <a href="#" class="donate-btn">Donate Here</a>
+                </div>
+            </div>
+            
+            <div class="summary-card">
+                <div class="goal-number">SUMMARY</div>
+                <div class="goal-title">All Mfangano Community Projects</div>
+                <a href="#" class="donate-btn">Donate Here</a>
+            </div>
+        </div>
+        
+        <div class="donation-section">
+            <h2 class="section-title">🏦 In Person Donations</h2>
+            
+            <div class="contact-info">
+                <h3>Bank Transfer Options</h3>
+                <div class="contact-details">
+                    <p><strong>Direct Bank Transfer:</strong> Deposit directly into our foundation bank account using bank direct transfer after getting in touch with our Director.</p>
+                    <p><strong>International Transfer Services:</strong> Money Gram, Easter Gram, Western Union, or World Remit</p>
+                </div>
+                
+                <div class="contact-details">
+                    <p><strong>Director:</strong> Mr. Samuel Ochieng Odoyo<br>
+                    <strong>Organization:</strong> Sagrema Foundation, Kenya</p>
+                </div>
+                
+                <div class="contact-details">
+                    <p><strong>M-Pesa Online Transactions:</strong></p>
+                    <div class="phone-number">+254-720-768-118</div>
+                    <p style="margin-top: 10px;"><em>(Authorized Safaricom M-Pesa phone number)</em></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="closing-message">
+            <h3>🌟 We have very good plans for the development of our community!</h3>
+            
+            <p>We are campaigning within the community for ownership of the projects and seeking full support towards these initiatives. We are requesting to work together with other organizations, foundations, well-wishers and donors to secure funds for community development and life-saving projects.</p>
+            
+            <p>The support is open - you can support any of the projects mentioned or initiate any project of your choice in any way relevant to the project's development and sustainability.</p>
+            
+            <p><strong>Together, we can make a lasting difference in the lives of the Mfangano Island community!</strong></p>
+        </div>
+    </div>
+</body>
+</html>

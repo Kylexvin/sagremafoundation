@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bringing Light to Wakinga - Solar Energy Initiative</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section {
+            text-align: center;
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(243, 156, 18, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            animation: sparkle 20s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes sparkle {
+            0% { transform: translateX(0) translateY(0) rotate(0deg); }
+            100% { transform: translateX(-50px) translateY(-50px) rotate(360deg); }
+        }
+
+        .hero-section h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-section .project-title {
+            font-size: 1.6em;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            font-weight: 600;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sagrema-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 25px;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+        }
+
+        .sagrema-badge h3 {
+            font-size: 1.4em;
+            margin-bottom: 8px;
+        }
+
+        .content-section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            color: #2c5aa0;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+            border-radius: 2px;
+        }
+
+        .about-content {
+            background: #fff8e1;
+            padding: 40px;
+            border-radius: 15px;
+            border-left: 6px solid #f39c12;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .location-highlight {
+            background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(23, 162, 184, 0.3);
+        }
+
+        .location-highlight h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .location-highlight p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .power-poverty {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 25px rgba(220, 53, 69, 0.3);
+        }
+
+        .power-poverty h3 {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .power-poverty p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .power-poverty .definition {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .challenge-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .challenge-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .challenge-card h4 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .challenge-card p {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .solution-section {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 25px rgba(40, 167, 69, 0.3);
+        }
+
+        .solution-section h3 {
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .solution-section p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .goal-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+
+        .goal-card .icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .goal-card h4 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .goal-card p {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .impact-areas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .impact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #f39c12;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .impact-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #f39c12;
+        }
+
+        .impact-card h4 {
+            color: #2c5aa0;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .impact-card p {
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+
+        .community-driven {
+            background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(111, 66, 193, 0.3);
+        }
+
+        .community-driven h3 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .community-driven p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .gallery-section {
+            margin-top: 50px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            background: #f8f9fa;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-placeholder {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #856404;
+            font-size: 1.1em;
+            border-bottom: 3px solid #f39c12;
+        }
+
+        .gallery-caption {
+            padding: 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .gallery-caption h4 {
+            color: #2c5aa0;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .partnership-call {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .partnership-call h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2em;
+            }
+            
+            .hero-section .project-title {
+                font-size: 1.3em;
+            }
+            
+            .challenges-grid, .goals-grid, .impact-areas {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .hero-section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero-section">
+            <h1>💡 Bringing Light to Wakinga Community</h1>
+            <p class="project-title">A Solar Energy Initiative</p>
+            <p class="subtitle">Transforming Lives Through Clean, Renewable Energy</p>
+            <div class="sagrema-badge">
+                <h3>🌟 Sagrema Foundation</h3>
+                <p>Mfangano Island Development Initiative</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">THE CHALLENGE</h2>
+            
+            <div class="location-highlight">
+                <h3>🏝️ Mfangano Island, Lake Victoria</h3>
+                <p>Mfangano Island, located in Lake Victoria, is a remote and isolated region far from Kenya's major towns and cities. Due to its geographical location and limited infrastructure, access to reliable electricity remains a serious challenge for many families.</p>
+            </div>
+
+            <div class="about-content">
+                <p>In communities such as Wakinga, most homes live in complete darkness once the sun sets. This creates numerous challenges that affect every aspect of daily life, from education and healthcare to economic opportunities and basic safety.</p>
+            </div>
+
+            <div class="power-poverty">
+                <h3>⚡ Understanding "Power Poverty"</h3>
+                <div class="challenges-grid">
+                    <div class="challenge-card">
+                        <div class="icon">📚</div>
+                        <h4>Educational Barriers</h4>
+                        <p>Children struggle to study at night without proper lighting</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="icon">🕯️</div>
+                        <h4>Unsafe Lighting</h4>
+                        <p>Families rely on dangerous kerosene lamps for basic illumination</p>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="icon">🏥</div>
+                        <h4>Healthcare Challenges</h4>
+                        <p>Health facilities operate under difficult conditions without stable power</p>
+                    </div>
+                </div>
+                <div class="definition">
+                    <p><strong>"Power Poverty"</strong> — A condition where people are trapped in poverty due to lack of electricity, limiting their opportunities for education, healthcare, and economic advancement.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">OUR SOLUTION</h2>
+            
+            <div class="solution-section">
+                <h3>☀️ Sustainable Solar Energy Project</h3>
+                <p>To address this urgent need, Sagrema Foundation is launching a sustainable solar energy project. Our goal is to bring clean, renewable power to the residents of Wakinga village and beyond.</p>
+                <p>By installing solar panels in homes, schools, and health facilities, we aim to create lasting change in the community.</p>
+
+                <div class="goals-grid">
+                    <div class="goal-card">
+                        <div class="icon">✨</div>
+                        <h4>Improve Quality of Life</h4>
+                        <p>Providing safe, reliable lighting and power for daily activities</p>
+                    </div>
+                    <div class="goal-card">
+                        <div class="icon">🎓</div>
+                        <h4>Support Education & Healthcare</h4>
+                        <p>Enabling evening study and powering medical equipment</p>
+                    </div>
+                    <div class="goal-card">
+                        <div class="icon">💼</div>
+                        <h4>Promote Economic Empowerment</h4>
+                        <p>Creating opportunities for businesses and income generation</p>
+                    </div>
+                    <div class="goal-card">
+                        <div class="icon">🌱</div>
+                        <h4>Reduce Pollution</h4>
+                        <p>Eliminating harmful fossil fuel use and kerosene dependence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">PROJECT IMPACT AREAS</h2>
+            
+            <div class="impact-areas">
+                <div class="impact-card">
+                    <div class="icon">🏠</div>
+                    <h4>Residential Homes</h4>
+                    <p>Installing solar systems in family homes to provide safe, reliable lighting and power for daily activities and evening routines.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="icon">🏫</div>
+                    <h4>Educational Facilities</h4>
+                    <p>Powering schools to enable evening classes, computer labs, and extended learning opportunities for students.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="icon">🏥</div>
+                    <h4>Health Centers</h4>
+                    <p>Ensuring medical facilities have consistent power for equipment, vaccine storage, and extended operating hours.</p>
+                </div>
+                <div class="impact-card">
+                    <div class="icon">🏪</div>
+                    <h4>Community Businesses</h4>
+                    <p>Supporting local entrepreneurs with power for shops, charging stations, and small-scale manufacturing.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">COMMUNITY-DRIVEN APPROACH</h2>
+            
+            <div class="community-driven">
+                <h3>🤝 Long-Term Impact Strategy</h3>
+                <p>This project is community-driven and designed to create long-term impact. We work closely with local leaders, train community members in solar system maintenance, and ensure sustainable operation of all installations.</p>
+                <p>Our approach emphasizes local ownership, capacity building, and environmental stewardship to create lasting change that benefits future generations.</p>
+            </div>
+
+            <div class="about-content">
+                <p>We believe that sustainable development comes from within the community. By involving local residents in every step of the process - from planning and installation to maintenance and expansion - we ensure that this project will continue to benefit Wakinga for years to come.</p>
+                <p>Training programs will equip community members with the skills needed to maintain and troubleshoot solar systems, creating local employment opportunities and ensuring project sustainability.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">GALLERY</h2>
+            <div class="gallery-section">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            🌅 Wakinga Village
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Current Conditions</h4>
+                            <p>Life in Wakinga village before solar power - families managing without reliable electricity.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            🕯️ Kerosene Lamps
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Unsafe Lighting</h4>
+                            <p>Families currently dependent on dangerous kerosene lamps for basic illumination needs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            ☀️ Solar Installation
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Project Implementation</h4>
+                            <p>Solar panel installation process bringing clean energy to homes and community facilities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            📚 Evening Study
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Educational Impact</h4>
+                            <p>Children able to study in the evening with reliable solar-powered lighting systems.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            🏥 Powered Health Center
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Healthcare Improvement</h4>
+                            <p>Medical facilities with solar power providing extended hours and better patient care.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <div class="gallery-placeholder">
+                            👷 Community Training
+                        </div>
+                        <div class="gallery-caption">
+                            <h4>Skills Development</h4>
+                            <p>Local residents receiving training on solar system maintenance and operation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>JOIN HANDS WITH SAGREMA FOUNDATION</h2>
+            <p>Help us bring light, hope, and opportunity to the people of Mfangano Island through sustainable solar energy.</p>
+            
+            <div class="partnership-call">
+                <h3>🤝 Partnership Opportunities</h3>
+                <p><strong>We invite donors, partners, and well-wishers to join hands with Sagrema Foundation as we transform lives through clean energy.</strong></p>
+            </div>
+            
+            <p><strong>Together, we can end power poverty and illuminate a brighter future for Wakinga!</strong></p>
+        </div>
+    </div>
+</body>
+</html>
