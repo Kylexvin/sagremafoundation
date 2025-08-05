@@ -1,9 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Involved - Sagrema Foundation</title>
+    <title>Sagrema Foundation - Empower Mfangano Island Community</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/health.css">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+
+</head>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+           <a href="index.html" class="nav-logo">
+    <!-- Text fallback, you can comment this out later -->
+    <!-- <div class="logo-text">
+        <h1>SAGREMA</h1>
+    </div> -->
+
+    <!-- Placeholder for image logo -->
+    <!-- Uncomment and update src when ready -->
+    <img src="images/logo.png" alt="SAGREMA Foundation Logo" class="logo-img">
+</a>
+
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                
+                <li class="nav-item dropdown" id="projects-dropdown">
+                    <a href="#" class="nav-link ">Our Projects</a>
+                    <div class="dropdown-menu">
+                        <a href="healthpage.html" class="dropdown-item">Community Health Centre</a>
+                        <a href="waterpage.html" class="dropdown-item">Clean Drinking Water</a>
+                        <a href="farmingpage.html" class="dropdown-item">Food Security & Agriculture</a>
+                        <a href="empowermentpage.html" class="dropdown-item">Women & Youth Empowerment</a>
+                        <a href="educationpage.html" class="dropdown-item">Education Support</a>
+                        <a href="environmentpage.html" class="dropdown-item">Environmental Conservation</a>
+                        <a href="cleanenergypage.html" class="dropdown-item">Solar Project</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown" id="involved-dropdown">
+                    <a href="get-involved.html" class="nav-link active">Get Involved</a>
+                    <div class="dropdown-menu">
+                        <a href="get-involved.html#volunteer" class="dropdown-item">Volunteer With Us</a>
+                        <a href="get-involved.html#stay" class="dropdown-item">Stay & Visit (Kshs 1000/day)</a>
+                        <a href="get-involved.html#partner" class="dropdown-item">Partner With Us</a>
+                    </div>
+                </li>
+                
+
+                
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link cta-button">Donate Now</a>
+                </li>
+            </ul>
+
+            <div class="mobile-toggle" id="mobile-toggle">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </nav>
     <style>
         * {
             margin: 0;
@@ -341,7 +411,7 @@
             background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
             border-radius: 15px;
             overflow: hidden;
-            height: 250px;
+            height: 250px; width: 100%;
             cursor: pointer;
             transition: all 0.3s ease;
             border: 3px solid transparent;
@@ -595,55 +665,32 @@
             <h2><div class="icon">📸</div>GET INVOLVED GALLERY</h2>
             <p>See the impact of volunteers, visitors, and partners who have joined our mission to transform lives and build sustainable communities on Mfangano Island.</p>
             
-            <div class="gallery-grid">
-                <div class="gallery-item volunteers">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">👥</div>
-                        <h4>Volunteers in Action</h4>
-                        <p>International and local volunteers working on education, healthcare, and community projects</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item visitors">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🏠</div>
-                        <h4>Visitors & Homestays</h4>
-                        <p>Guests from around the world experiencing authentic island life and community culture</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item partnerships">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🤝</div>
-                        <h4>Partnership Projects</h4>
-                        <p>Collaborative initiatives with NGOs, institutions, and organizations making real impact</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item activities">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🎯</div>
-                        <h4>Community Activities</h4>
-                        <p>Training sessions, workshops, and skill-building activities led by volunteers and partners</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item accommodation">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🛏️</div>
-                        <h4>Accommodation Experience</h4>
-                        <p>Comfortable family-style lodging with stunning lake views and authentic local hospitality</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item impact">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🌟</div>
-                        <h4>Lasting Impact</h4>
-                        <p>Success stories and transformations resulting from volunteer efforts and partnerships</p>
-                    </div>
-                </div>
-            </div>
+<div class="gallery-grid">
+    <div class="gallery-item volunteers">
+        <img src="images/accomodation.JPG" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+    </div>
+    
+    <div class="gallery-item visitors">
+        <img src="images/acc.JPG" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+    </div>
+    
+    <div class="gallery-item partnerships">
+        <img src="images/hosting.jpg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+    </div>
+    
+    <div class="gallery-item activities">
+        <img src="images/hosting_1.JPG" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+    </div>
+    
+    <div class="gallery-item accommodation">
+        <img src="images/house.JPG" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+    </div>
+    
+    <div class="gallery-item impact">
+        <img src="images/house2.JPG" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;" />
+    </div>
+</div>
+
         </div>
 
         <div class="cta-section">
@@ -658,5 +705,6 @@
             </div>
         </div>
     </div>
+<script src="js/main.js"></script>
 </body>
 </html>

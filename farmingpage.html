@@ -1,9 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organic Permaculture Agriculture Project</title>
+    <title>Sagrema Foundation - Empower Mfangano Island Community</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/health.css">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+
+</head>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+           <a href="index.html" class="nav-logo">
+    <!-- Text fallback, you can comment this out later -->
+    <!-- <div class="logo-text">
+        <h1>SAGREMA</h1>
+    </div> -->
+
+    <!-- Placeholder for image logo -->
+    <!-- Uncomment and update src when ready -->
+    <img src="images/logo.png" alt="SAGREMA Foundation Logo" class="logo-img">
+</a>
+
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                
+                <li class="nav-item dropdown" id="projects-dropdown">
+                    <a href="#" class="nav-link active">Our Projects</a>
+                    <div class="dropdown-menu">
+                        <a href="healthpage.html" class="dropdown-item">Community Health Centre</a>
+                        <a href="waterpage.html" class="dropdown-item">Clean Drinking Water</a>
+                        <a href="farmingpage.html" class="dropdown-item">Food Security & Agriculture</a>
+                        <a href="empowermentpage.html" class="dropdown-item">Women & Youth Empowerment</a>
+                        <a href="educationpage.html" class="dropdown-item">Education Support</a>
+                        <a href="environmentpage.html" class="dropdown-item">Environmental Conservation</a>
+                        <a href="cleanenergypage.html" class="dropdown-item">Solar Project</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown" id="involved-dropdown">
+                    <a href="get-involved.html" class="nav-link">Get Involved</a>
+                    <div class="dropdown-menu">
+                        <a href="get-involved.html#volunteer" class="dropdown-item">Volunteer With Us</a>
+                        <a href="get-involved.html#stay" class="dropdown-item">Stay & Visit (Kshs 1000/day)</a>
+                        <a href="get-involved.html#partner" class="dropdown-item">Partner With Us</a>
+                    </div>
+                </li>
+                
+
+                
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link cta-button">Donate Now</a>
+                </li>
+            </ul>
+
+            <div class="mobile-toggle" id="mobile-toggle">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </nav>
     <style>
         * {
             margin: 0;
@@ -20,7 +90,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -189,7 +259,7 @@
 
         .support-section p {
             font-size: 1.2rem;
-            opacity: 0.95;
+            color: white;
             max-width: 800px;
             margin: 0 auto 15px auto;
         }
@@ -333,7 +403,7 @@
             }
         }
     </style>
-</head>
+
 <body>
     <div class="container">
         <div class="hero">
@@ -462,62 +532,63 @@
             <h2><div class="icon">📸</div>PROJECT GALLERY</h2>
             <p>Witness the transformation of sustainable agriculture, livestock development, and fisheries initiatives that are empowering our community towards food security and economic independence.</p>
             
-            <div class="gallery-grid">
-                <div class="gallery-item crops">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🌾</div>
-                        <h4>Organic Crop Production</h4>
-                        <p>Permaculture farming techniques, soil-nurturing crops, and sustainable land management practices</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item livestock">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🐄</div>
-                        <h4>Livestock Development</h4>
-                        <p>Poultry units, goat farming, and cattle keeping for improved livelihoods and nutrition</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item fishing">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🎣</div>
-                        <h4>Sustainable Fisheries</h4>
-                        <p>Floating fish cages, fishing equipment, and aquaculture development in Lake Victoria</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item community-work">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">👥</div>
-                        <h4>Community Collaboration</h4>
-                        <p>Farmers working together, sharing knowledge, and building sustainable agricultural systems</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item training">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">📚</div>
-                        <h4>Training & Education</h4>
-                        <p>Microfinance education, grant application workshops, and agricultural skill development</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item success-stories">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🏆</div>
-                        <h4>Success Stories</h4>
-                        <p>Before and after transformations showing improved food security and economic empowerment</p>
-                    </div>
-                </div>
-            </div>
+<div class="gallery-grid">
+  <div class="gallery-item">
+    <img src="/images/agri.jpg" alt="Gallery Image">
+  </div>
+
+  <div class="gallery-item">
+    <img src="/images/goats.JPG" alt="Gallery Image">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/Poultry.jpg" alt="Gallery Image">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/fish.JPG" alt="Gallery Image">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/fishing.jpg" alt="Gallery Image">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/Broilers.jpg" alt="Gallery Image">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/farm.jpg" alt="Gallery Image">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/frm.jpg" alt="Gallery Image">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/Sailing.jpg" alt="Gallery Image">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/frm1.JPG" alt="Gallery Image">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/frm2.JPG" alt="Gallery Image">
+  </div>
+  <div class="gallery-item">
+    <img src="/images/tilapia.jpg" alt="Gallery Image">
+  </div>
+</div>
+
         </div>
 
         <div class="support-section">
             <h2>WE NEED YOUR SUPPORT</h2>
             <p>Help us build sustainable agricultural systems that benefit both communities and the environment. Your contribution supports organic farming, livestock development, and sustainable fisheries.</p>
             <p><strong>We provide assistance with:</strong> Grant applications, online fundraising campaigns, and microfinance education for community empowerment.</p>
+             <div style="background: #f97316; color: white; padding: 2rem; border-radius: 12px; text-align: center; margin: 2rem 0;">
+    <h2 style="margin-bottom: 1rem; font-size: 1.8rem;">Support Our Mission</h2>
+    <p style="font-size: 1rem; margin-bottom: 1.5rem;">
+        Help us build a healthier and empowered community. Every contribution counts.
+    </p>
+    <a href="https://www.mchanga.africa/fundraiser/61805" target="_blank" style="display: inline-block; background: white; color: #f97316; padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: bold; text-decoration: none;">
+        Donate Now
+    </a>
+</div>
         </div>
     </div>
+<script src="js/main.js"></script>
 </body>
 </html>

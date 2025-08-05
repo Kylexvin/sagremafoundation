@@ -1,9 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wakinga Community Water Project</title>
+    <title>Sagrema Foundation - Empower Mfangano Island Community</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/health.css">
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+
+
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+           <a href="index.html" class="nav-logo">
+    <!-- Text fallback, you can comment this out later -->
+    <!-- <div class="logo-text">
+        <h1>SAGREMA</h1>
+    </div> -->
+
+    <!-- Placeholder for image logo -->
+    <!-- Uncomment and update src when ready -->
+    <img src="images/logo.png" alt="SAGREMA Foundation Logo" class="logo-img">
+</a>
+
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                
+                <li class="nav-item dropdown" id="projects-dropdown">
+                    <a href="#" class="nav-link active">Our Projects</a>
+                    <div class="dropdown-menu">
+                        <a href="healthpage.html" class="dropdown-item">Community Health Centre</a>
+                        <a href="waterpage.html" class="dropdown-item">Clean Drinking Water</a>
+                        <a href="farmingpage.html" class="dropdown-item">Food Security & Agriculture</a>
+                        <a href="empowermentpage.html" class="dropdown-item">Women & Youth Empowerment</a>
+                        <a href="educationpage.html" class="dropdown-item">Education Support</a>
+                        <a href="environmentpage.html" class="dropdown-item">Environmental Conservation</a>
+                        <a href="cleanenergypage.html" class="dropdown-item">Solar Project</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item dropdown" id="involved-dropdown">
+                    <a href="get-involved.html" class="nav-link">Get Involved</a>
+                    <div class="dropdown-menu">
+                        <a href="get-involved.html#volunteer" class="dropdown-item">Volunteer With Us</a>
+                        <a href="get-involved.html#stay" class="dropdown-item">Stay & Visit (Kshs 1000/day)</a>
+                        <a href="get-involved.html#partner" class="dropdown-item">Partner With Us</a>
+                    </div>
+                </li>
+                
+
+                
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="donate.html" class="nav-link cta-button">Donate Now</a>
+                </li>
+            </ul>
+
+            <div class="mobile-toggle" id="mobile-toggle">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </nav>
     <style>
         * {
             margin: 0;
@@ -20,8 +90,8 @@
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 100%;
+            margin-top:30px;
             padding: 40px 20px;
         }
 
@@ -165,17 +235,20 @@
             margin-top: 25px;
         }
 
-        .gallery-item {
-            position: relative;
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            border-radius: 15px;
-            overflow: hidden;
-            height: 250px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 3px solid transparent;
-        }
 
+        .gallery-item img {
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.02);
+}
         .gallery-item:hover {
             transform: translateY(-8px);
             box-shadow: 0 15px 40px rgba(21, 101, 192, 0.3);
@@ -317,55 +390,32 @@
             <h2><div class="icon">📸</div>PROJECT GALLERY</h2>
             <p>Explore the journey of bringing clean water to Mfangano Island through our visual documentation of key milestones and community impact.</p>
             
-            <div class="gallery-grid">
-                <div class="gallery-item water-tower">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🏗️</div>
-                        <h4>Water Tower Construction</h4>
-                        <p>Building the 5,000L dual tank water tower system with gravity-fed distribution</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item power-system">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">⚡</div>
-                        <h4>Power System Installation</h4>
-                        <p>Setting up the electrical infrastructure and submersible pump system</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item water-kiosk">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🚰</div>
-                        <h4>First Water Kiosk</h4>
-                        <p>The operational water collection point serving 5,000 people daily</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item community">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">👥</div>
-                        <h4>Community Impact</h4>
-                        <p>Families and individuals accessing clean, safe drinking water</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item before-after">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🔄</div>
-                        <h4>Before & After</h4>
-                        <p>Transformation of water access on Mfangano Island</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item team">
-                    <div class="gallery-placeholder">
-                        <div class="gallery-placeholder-icon">🤝</div>
-                        <h4>Project Team</h4>
-                        <p>Angela Yuan, Sagrema Foundation, and community partners working together</p>
-                    </div>
-                </div>
-            </div>
+<div class="gallery-grid">
+    <div class="gallery-item water-tower">
+        <img src="./images/water.jpg" alt="Water Tower" style="width: 100%; border-radius: 8px;">
+    </div>
+
+    <div class="gallery-item power-system">
+        <img src="./images/water1.JPG" alt="Power System" style="width: 100%; border-radius: 8px;">
+    </div>
+
+    <div class="gallery-item water-kiosk">
+        <img src="./images/water2.jpg" alt="Water Kiosk" style="width: 100%; border-radius: 8px;">
+    </div>
+
+    <div class="gallery-item community">
+        <img src="./images/water3.JPG" alt="Community" style="width: 100%; border-radius: 8px;">
+    </div>
+
+    <!-- <div class="gallery-item before-after">
+        <img src="./images/before-after.jpg" alt="Before and After" style="width: 100%; border-radius: 8px;">
+    </div>
+
+    <div class="gallery-item team">
+        <img src="./images/team.jpg" alt="Team" style="width: 100%; border-radius: 8px;">
+    </div> -->
+</div>
+
         </div>
 
         <div class="support-section">
@@ -373,5 +423,7 @@
             <p>Help us expand clean water access to more families on Mfangano Island. Your contribution can help us build additional water kiosks, extend our distribution network, and bring life-saving clean water closer to those who need it most.</p>
         </div>
     </div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
