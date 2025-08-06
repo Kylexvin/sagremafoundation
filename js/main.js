@@ -68,3 +68,11 @@ window.addEventListener('resize', () => {
         dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
     }
 });
+  document.querySelectorAll('a.nav-link, .dropdown-item').forEach(link => {
+    link.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href && !href.startsWith('#') && !href.startsWith('javascript')) {
+        document.getElementById('page-loader').style.display = 'flex';
+      }
+    });
+  });
