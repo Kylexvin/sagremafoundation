@@ -13,18 +13,16 @@
 
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-           <a href="index.html" class="nav-logo">
-    <!-- Text fallback, you can comment this out later -->
-    <!-- <div class="logo-text">
-        <h1>SAGREMA</h1>
-    </div> -->
-
-    <!-- Placeholder for image logo -->
-    <!-- Uncomment and update src when ready -->
-    <img src="images/logo.png" alt="SAGREMA Foundation Logo" class="logo-img">
-</a>
-
-
+            <a href="index.html" class="nav-logo">
+                
+                <!-- Image logo for mobile -->
+                <img src="images/logo.png" alt="SAGREMA Foundation Logo" class="logo-img">
+                <!-- Text logo for desktop -->
+                <div class="logo-text">
+                    <h1>SAGREMA FOUNDATION</h1>
+                </div>
+            </a>
+            
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">Home</a>
@@ -51,12 +49,10 @@
                     <a href="get-involved.html" class="nav-link active">Get Involved</a>
                     <div class="dropdown-menu">
                         <a href="get-involved.html#volunteer" class="dropdown-item">Volunteer With Us</a>
-                        <a href="get-involved.html#stay" class="dropdown-item">Stay & Visit (Kshs 1000/day)</a>
+                        <a href="get-involved.html#stay" class="dropdown-item">Visit & Stay</a>
                         <a href="get-involved.html#partner" class="dropdown-item">Partner With Us</a>
                     </div>
                 </li>
-                
-
                 
                 <li class="nav-item">
                     <a href="contact.html" class="nav-link">Contact</a>
@@ -66,7 +62,7 @@
                     <a href="donate.html" class="nav-link cta-button">Donate Now</a>
                 </li>
             </ul>
-
+            
             <div class="mobile-toggle" id="mobile-toggle">
                 <div class="hamburger"></div>
                 <div class="hamburger"></div>
@@ -90,7 +86,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
             padding: 40px 20px;
         }
@@ -101,7 +97,8 @@
             padding: 60px 40px;
             border-radius: 20px;
             text-align: center;
-            margin-bottom: 40px;
+            margin-top: 70px;
+            margin-bottom: 20px;
             box-shadow: 0 15px 35px rgba(46, 125, 50, 0.3);
         }
 
@@ -359,7 +356,7 @@
         .cta-section p {
             font-size: 1.2rem;
             opacity: 0.95;
-            max-width: 800px;
+            max-width: 800px; color: whitesmoke;
             margin: 0 auto 25px auto;
         }
 
@@ -371,7 +368,7 @@
             margin-top: 30px;
         }
 
-        .cta-button {
+        .cta-buttonn {
             background: rgba(255,255,255,0.2);
             color: white;
             padding: 15px 30px;
@@ -588,16 +585,17 @@
                 </div>
             </div>
 
-            <h3>Find Us On These Platforms</h3>
-            <div class="platforms-grid">
-                <div class="platform-tag">WWOOF</div>
-                <div class="platform-tag">Helpstay</div>
-                <div class="platform-tag">Couchsurfing</div>
-                <div class="platform-tag">Homestay</div>
-                <div class="platform-tag">HelpX</div>
-                <div class="platform-tag">Worldpackers</div>
-                <div class="platform-tag">Volunteerbase</div>
-            </div>
+           <h3>Find Us On These Platforms</h3>
+<div class="platforms-grid">
+  <a href="https://wwoofindependents.org/en/host/43481-community-farm" target="_blank" class="platform-tag">WWOOF</a>
+  <a href="https://helpstay.com/stays/Volunteer-Community-Charity-Kenya#overview" target="_blank" class="platform-tag">Helpstay</a>
+  <a href="https://www.couchsurfing.com/people/merolinakinyi" target="_blank" class="platform-tag">Couchsurfing</a>
+  <a href="https://www.homestay.com/kenya/mfangano-island-kenya/202918-homestay-in-mfangano-east-location-between-sena-primary-school-and-kitawi-beach-mfangano-island-kenya" target="_blank" class="platform-tag">Homestay</a>
+  <a href="https://www.helpx.net/host/1370267OW" target="_blank" class="platform-tag">HelpX</a>
+  <a href="https://www.worldpackers.com/search/africa/kenya/mfangano_island" target="_blank" class="platform-tag">Worldpackers</a>
+  <a href="https://www.volunteersbase.com/africa/sub-saharan-africa/women-and-youths-empowerment-in-mfangano-island-kenya_i1833" target="_blank" class="platform-tag">Volunteerbase</a>
+</div>
+
         </div>
 
         <div class="section" id="partner">
@@ -699,12 +697,18 @@
             <p><strong>Take the first step today and join our mission to create a sustainable future for Mfangano Island!</strong></p>
             
             <div class="cta-buttons">
-                <a href="#volunteer" class="cta-button">🌟 Start Volunteering</a>
-                <a href="#stay" class="cta-button">🏠 Book Your Stay</a>
-                <a href="#partner" class="cta-button">🤝 Become a Partner</a>
+                <a href="#volunteer" class="cta-buttonn">🌟 Start Volunteering</a>
+                <a href="#stay" class="cta-buttonn">🏠 Book Your Stay</a>
+                <a href="#partner" class="cta-buttonn">🤝 Become a Partner</a>
             </div>
         </div>
     </div>
+<footer style="text-align:center; padding:10px; font-size:14px; color:rgb(20, 20, 20);">
+  &copy; <span id="year"></span> info@sagremafoundation.org
+</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

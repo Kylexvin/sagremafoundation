@@ -13,31 +13,29 @@
 
 
 <body>
-    <nav class="navbar" id="navbar">
+   <nav class="navbar" id="navbar">
         <div class="nav-container">
-           <a href="index.html" class="nav-logo">
-    <!-- Text fallback, you can comment this out later -->
-    <!-- <div class="logo-text">
-        <h1>SAGREMA</h1>
-    </div> -->
-
-    <!-- Placeholder for image logo -->
-    <!-- Uncomment and update src when ready -->
-    <img src="images/logo.png" alt="SAGREMA Foundation Logo" class="logo-img">
-</a>
-
-
+            <a href="index.html" class="nav-logo">
+                
+                <!-- Image logo for mobile -->
+                <img src="images/logo.png" alt="SAGREMA Foundation Logo" class="logo-img">
+                <!-- Text logo for desktop -->
+                <div class="logo-text">
+                    <h1>SAGREMA FOUNDATION</h1>
+                </div>
+            </a>
+            
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">Home</a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="about.html" class="nav-link active">About Us</a>
                 </li>
                 
                 <li class="nav-item dropdown" id="projects-dropdown">
-                    <a href="#" class="nav-link active">Our Projects</a>
+                    <a href="#" class="nav-link">Our Projects</a>
                     <div class="dropdown-menu">
                         <a href="healthpage.html" class="dropdown-item">Community Health Centre</a>
                         <a href="waterpage.html" class="dropdown-item">Clean Drinking Water</a>
@@ -53,12 +51,10 @@
                     <a href="get-involved.html" class="nav-link">Get Involved</a>
                     <div class="dropdown-menu">
                         <a href="get-involved.html#volunteer" class="dropdown-item">Volunteer With Us</a>
-                        <a href="get-involved.html#stay" class="dropdown-item">Stay & Visit (Kshs 1000/day)</a>
+                        <a href="get-involved.html#stay" class="dropdown-item">Visit & Stay</a>
                         <a href="get-involved.html#partner" class="dropdown-item">Partner With Us</a>
                     </div>
                 </li>
-                
-
                 
                 <li class="nav-item">
                     <a href="contact.html" class="nav-link">Contact</a>
@@ -68,7 +64,7 @@
                     <a href="donate.html" class="nav-link cta-button">Donate Now</a>
                 </li>
             </ul>
-
+            
             <div class="mobile-toggle" id="mobile-toggle">
                 <div class="hamburger"></div>
                 <div class="hamburger"></div>
@@ -103,10 +99,15 @@
             padding: 60px 40px;
             border-radius: 20px;
             text-align: center;
-            margin-bottom: 40px;
+            margin-top: 70px;
             box-shadow: 0 15px 35px rgba(230, 81, 0, 0.3);
         }
-
+        .hero p, location-info {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+           color:#ccc;
+        }
         .hero h1 {
             font-size: 2.8rem;
             margin-bottom: 15px;
@@ -116,7 +117,7 @@
         .hero .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
-            font-weight: 300;
+            font-weight: 300; color: aliceblue;
             margin-bottom: 20px;
         }
 
@@ -414,7 +415,7 @@
         
         <div class="founder-card">
             <div class="founder-avatar">
-                <img src="images/board_1.jpg" alt="Grace Akinyi Ochieng">
+                <img src="images/board_2.jpg" alt="Grace Akinyi Ochieng">
             </div>
             <h4>Grace Akinyi Ochieng</h4>
             <p class="role">Co-Founder</p>
@@ -431,7 +432,7 @@
         
         <div class="founder-card">
             <div class="founder-avatar">
-                <img src="images/board_2.jpg" alt="Meroline Akinyi Ochieng">
+                <img src="images/board_1.jpg" alt="Meroline Akinyi Ochieng">
             </div>
             <h4>Meroline Akinyi Ochieng</h4>
             <p class="role">Co-Founder</p>
@@ -604,7 +605,7 @@
             </div>
         </div>
     </div> <footer style="text-align:center; padding:10px; font-size:14px; color:white;">
-  &copy; <span id="year"></span> info@SAGREMAFOUNDATION.ORG
+  &copy; <span id="year"></span> info@sagremafoundation.org
 </footer>
 
 <script>

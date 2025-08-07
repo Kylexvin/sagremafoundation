@@ -13,18 +13,16 @@
 
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-           <a href="index.html" class="nav-logo">
-    <!-- Text fallback, you can comment this out later -->
-    <!-- <div class="logo-text">
-        <h1>SAGREMA</h1>
-    </div> -->
-
-    <!-- Placeholder for image logo -->
-    <!-- Uncomment and update src when ready -->
-    <img src="images/logo.png" alt="SAGREMA Foundation Logo" class="logo-img">
-</a>
-
-
+            <a href="index.html" class="nav-logo">
+                
+                <!-- Image logo for mobile -->
+                <img src="images/logo.png" alt="SAGREMA Foundation Logo" class="logo-img">
+                <!-- Text logo for desktop -->
+                <div class="logo-text">
+                    <h1>SAGREMA FOUNDATION</h1>
+                </div>
+            </a>
+            
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
                     <a href="index.html" class="nav-link">Home</a>
@@ -35,7 +33,7 @@
                 </li>
                 
                 <li class="nav-item dropdown" id="projects-dropdown">
-                    <a href="#" class="nav-link">Our Projects</a>
+                    <a href="#" class="nav-link ">Our Projects</a>
                     <div class="dropdown-menu">
                         <a href="healthpage.html" class="dropdown-item">Community Health Centre</a>
                         <a href="waterpage.html" class="dropdown-item">Clean Drinking Water</a>
@@ -51,12 +49,10 @@
                     <a href="get-involved.html" class="nav-link">Get Involved</a>
                     <div class="dropdown-menu">
                         <a href="get-involved.html#volunteer" class="dropdown-item">Volunteer With Us</a>
-                        <a href="get-involved.html#stay" class="dropdown-item">Stay & Visit (Kshs 1000/day)</a>
+                        <a href="get-involved.html#stay" class="dropdown-item">Visit & Stay</a>
                         <a href="get-involved.html#partner" class="dropdown-item">Partner With Us</a>
                     </div>
                 </li>
-                
-
                 
                 <li class="nav-item">
                     <a href="contact.html" class="nav-link">Contact</a>
@@ -66,7 +62,7 @@
                     <a href="donate.html" class="nav-link cta-button">Donate Now</a>
                 </li>
             </ul>
-
+            
             <div class="mobile-toggle" id="mobile-toggle">
                 <div class="hamburger"></div>
                 <div class="hamburger"></div>
@@ -90,7 +86,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
             padding: 20px;
         }
@@ -101,6 +97,7 @@
             padding: 40px;
             border-radius: 20px;
             margin-bottom: 30px;
+            margin-top: 70px;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
@@ -335,7 +332,7 @@
             
             <p>Our partnerships create opportunities for volunteering, fund-raising, and organic farming field demonstrations.</p>
             
-            <a href="#" class="youtube-link">📺 See our YouTube Videos for more information</a>
+            <a href="https://www.youtube.com/channel/UCOimEg3w5lPdsYvnr1sckQg" class="youtube-link">📺 See our YouTube Videos for more information</a>
         </div>
         
         <div class="donation-section">
@@ -348,44 +345,44 @@
                 <div class="goal-card">
                     <div class="goal-number">GOAL 1</div>
                     <div class="goal-title">The Community Clinic on Mfangano Island</div>
-                    <a href="#" class="donate-btn">Donate Here</a>
+                    <a href="https://www.mchanga.africa/fundraiser/57959" class="donate-btn">Donate Here</a>
                 </div>
                 
                 <div class="goal-card">
                     <div class="goal-number">GOAL 2</div>
                     <div class="goal-title">The Wakinga Community Water Project</div>
-                    <a href="#" class="donate-btn">Donate Here</a>
+                    <a href="https://www.mchanga.africa/fundraiser/59471" class="donate-btn">Donate Here</a>
                 </div>
                 
                 <div class="goal-card">
                     <div class="goal-number">GOAL 3</div>
                     <div class="goal-title">A Community Garden for the Less-Fortunate</div>
-                    <a href="#" class="donate-btn">Donate Here</a>
+                    <a href="https://www.mchanga.africa/fundraiser/61805" class="donate-btn">Donate Here</a>
                 </div>
                 
                 <div class="goal-card">
                     <div class="goal-number">GOAL 4</div>
                     <div class="goal-title">Women & Youth Empowerment</div>
-                    <a href="#" class="donate-btn">Donate Here</a>
+                    <a href="https://www.mchanga.africa/fundraiser/57955" class="donate-btn">Donate Here</a>
                 </div>
                 
                 <div class="goal-card">
                     <div class="goal-number">GOAL 5</div>
                     <div class="goal-title">Improve Schools Infrastructure on Mfangano Island</div>
-                    <a href="#" class="donate-btn">Donate Here</a>
+                    <a href="https://www.mchanga.africa/fundraiser/58666" class="donate-btn">Donate Here</a>
                 </div>
                 
                 <div class="goal-card">
                     <div class="goal-number">GOAL 6</div>
                     <div class="goal-title">Eco Projects</div>
-                    <a href="#" class="donate-btn">Donate Here</a>
+                    <a href="https://www.mchanga.africa/fundraiser/53824" class="donate-btn">Donate Here</a>
                 </div>
             </div>
             
             <div class="summary-card">
                 <div class="goal-number">SUMMARY</div>
                 <div class="goal-title">All Mfangano Community Projects</div>
-                <a href="#" class="donate-btn">Donate Here</a>
+                <a href="https://www.mchanga.africa/fundraiser/53824" class="donate-btn">Donate Here</a>
             </div>
         </div>
         
@@ -422,5 +419,15 @@
             <p><strong>Together, we can make a lasting difference in the lives of the Mfangano Island community!</strong></p>
         </div>
     </div>
+</body>
+   <footer style="text-align:center; padding:10px; font-size:14px; color:rgb(8, 8, 8);">
+  &copy; <span id="year"></span> info@sagremafoundation.org
+</footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
